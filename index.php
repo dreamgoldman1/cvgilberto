@@ -189,25 +189,54 @@
                             </p>                            
                             <div class="skillset">                               
                                 <div class="item">
-                                    <h3 class="level-title">Symfony<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Symfony Framework">Experto</span></h3>
+                                    <h3 class="level-title">Symfony<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Symfony 3 Framework">Experto</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="95%"></div>
                                     </div><!--//level-bar-->                                 
                                 </div><!--//item-->
                                 
                                 <div class="item">
-                                    <h3 class="level-title">Drupal<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Drupal CMS">Experto</span></h3>
+                                    <h3 class="level-title">Drupal<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Drupal 7 CMS">Experto</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="90%"></div>
                                     </div><!--//level-bar-->                                 
                                 </div><!--//item-->
                                 
                                 <div class="item">
-                                    <h3 class="level-title">Laravel<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Symfony Framework">Pro</span></h3>
+                                    <h3 class="level-title">Laravel<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Laravel 5 Framework">Pro</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="80%"></div>
                                     </div><!--//level-bar-->                                 
                                 </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">MySQL<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="MySQL 5 Base de Datos">Pro</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="85%"></div>
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">HTML 5<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="HTML 5">Expert</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="95%"></div>
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">jQuery<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="jQuery 3">Pro</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="85%"></div>
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Bootstrap<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Bootstrap 3">Pro</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="85%"></div>
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
                                 <!--<p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p> -->
                             </div>              
                         </div><!--//content-->  
@@ -348,7 +377,8 @@
 <?php
     function enviarCorreo($from, $nombre, $mensaje){
         // Create the transport
-        $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
+        //$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls') // Local
+        $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl') // Producción
             ->setUsername('gilbertgol@gmail.com')
             ->setPassword('g1lb3rt0')
         ;
