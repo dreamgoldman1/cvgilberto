@@ -348,7 +348,7 @@
 <?php
     function enviarCorreo($from, $nombre, $mensaje){
         // Create the transport
-        $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls')
+        $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
             ->setUsername('gilbertgol@gmail.com')
             ->setPassword('g1lb3rt0')
         ;
